@@ -1,0 +1,21 @@
+PartID,Brand,Vehicle,PartName,Price
+101,Toyota,Corolla,Brake Pad,120
+102,Toyota,Corolla,Brake Pad,120
+103,Toyta,Corolla,Brake Pad,120
+104,Honda,Civic,Oil Filter,40
+105,Honda,,Oil Filter,40
+106,,Camry,Air Filter,55
+107,Ford,Focus,Brake Pad,-10
+108,Ford,Focus,Brake Pad,0
+109,BMW,320i,Engine Oil,abc
+110,Toyota,RAV4,Spark Plug,35
+111,Toyota,RAV4,Spark Plug,35
+112,Toyota,RAV4,Spark Plug,35
+113,Honda,Accord,Air Filter,
+114,Nissan,Altima,Brake Pad,75
+115,Nissan,,Brake Pad,75
+116,Ford,Focus,,60
+117,,Civic,Oil Filter,40
+118,BMW,320i,Brake Disc,0
+119,BMW,320i,Brake Disc,150
+120,Toyta,Corolla,Brake Pad,120
