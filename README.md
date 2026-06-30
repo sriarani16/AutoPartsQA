@@ -221,8 +221,7 @@ dashboard/app.py
 ## 🌐 Live Demo
 Your app is live here:
 
-👉 [https://autopartsqa.streamlit.app](https://autopartsqa-xxxxx.streamlit.app
-)
+👉 [https://autopartsapp.streamlit.app](https://autopartsapp.streamlit.app)
 
 
 # 🔮 Future Enhancements
