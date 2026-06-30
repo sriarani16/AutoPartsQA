@@ -1,67 +1,144 @@
-# 📘 AutoPartsQA — Data Quality Analysis Platform
+# 🚗 AutoPartsQA – Automotive Data Quality & Analytics Platform
 
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
-![Python](https://img.shields.io/badge/Python-3.9+-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-orange)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-red)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-AutoPartsQA is a **Python and Streamlit-based data quality analysis platform** designed to identify, analyze, and visualize data quality issues in automotive parts datasets.
+## 🌐 Live Demo
 
-The application performs automated validation checks, calculates an overall data quality score, and presents interactive visualizations to help identify data issues before they affect downstream analytics or machine learning workflows.
-
-This project demonstrates practical experience with **Python, Pandas, SQL-ready data validation, dashboard development, and data quality engineering**, making it highly relevant for Data Science, Data Analytics, and Data Engineering roles.
+👉 **https://autopartsapp.streamlit.app**
 
 ---
 
-# 🚀 Features
+# 📘 Overview
 
-## 🔍 Automated Data Quality Checks
+AutoPartsQA is an end-to-end **Automotive Data Quality and Analytics Platform** designed to identify, measure, and visualize data quality issues before they impact reporting, analytics, machine learning models, or business operations.
 
-The platform automatically detects:
+This project simulates a real-world enterprise workflow where automotive parts data is stored in **PostgreSQL**, validated using **SQL and Python**, processed with **Pandas and SQLAlchemy**, and visualized through an interactive **Streamlit** dashboard.
 
-- Missing manufacturer/brand names
+The platform automatically detects data quality issues, calculates an overall **Data Quality Score**, and provides actionable insights to improve dataset reliability.
+
+---
+
+# 🚨 Business Problem
+
+Automotive companies receive parts data from multiple suppliers. Poor-quality data can lead to:
+
+- Incorrect part matching
+- Duplicate inventory
+- Pricing errors
+- Failed ordering workflows
+- Poor product search results
+- Reduced customer satisfaction
+
+AutoPartsQA helps identify these issues early through automated validation, quality scoring, and interactive reporting.
+
+---
+
+# 🔍 Features
+
+## ✅ Data Validation Engine
+
+Automatically detects:
+
+- Missing manufacturer names
 - Missing vehicle models
+- Missing categories
 - Missing part names
-- Invalid or non-numeric prices
+- Invalid or negative prices
 - Duplicate records
-- Inconsistent manufacturer naming
+- Brand inconsistencies
 - Overall dataset completeness
 
 ---
 
-## 📊 Interactive Dashboard
+## 📊 Interactive Data Quality Dashboard
 
 Built using **Streamlit**, the dashboard provides:
 
 - Dataset summary
-- Data quality score
-- Missing value statistics
+- Data Quality Score
+- Missing values analysis
 - Duplicate record analysis
+- Invalid price detection
+- Brand distribution
+- Category statistics
+- Interactive charts
+- Raw data explorer
+
+---
+
+## 🗄 SQL Validation Rules (PostgreSQL)
+
+Implements validation queries for:
+
+- Duplicate detection
+- Missing value identification
+- Invalid pricing checks
+- Brand statistics
+- Category summaries
+
+---
+
+## 📈 Business Analytics
+
+Provides useful business insights including:
+
 - Top manufacturers
-- Error distribution charts
-- Interactive data explorer
+- Highest-quality categories
+- Duplicate percentage
+- Missing data percentage
+- Price distribution
+- Overall dataset health score
 
 ---
 
-## 📈 Data Quality Score
+# 🏗 System Architecture
 
-The application automatically calculates an overall **Data Quality Score** based on detected issues, providing a quick assessment of dataset health.
-
-Example metrics include:
-
-- Dataset Completeness
-- Duplicate Percentage
-- Invalid Price Count
-- Missing Manufacturer Count
-- Missing Vehicle Models
-
----
-
-# 🧠 Project Architecture
-
+```text
+                 CSV Dataset
+                      │
+                      ▼
+             PostgreSQL Database
+                      │
+                      ▼
+            SQL Validation Queries
+                      │
+                      ▼
+        Python Data Processing
+        (Pandas + SQLAlchemy)
+                      │
+                      ▼
+          Data Quality Engine
+                      │
+                      ▼
+          Streamlit Dashboard
 ```
+
+---
+
+# 🛠 Technology Stack
+
+- Python
+- PostgreSQL
+- SQL
+- Pandas
+- NumPy
+- SQLAlchemy
+- Streamlit
+- Plotly
+- Git
+- GitHub
+
+---
+
+# 📁 Project Structure
+
+```text
 AutoPartsQA/
-│
+
 ├── analysis/
 │   ├── cleaning.py
 │   ├── quality.py
@@ -70,14 +147,17 @@ AutoPartsQA/
 ├── dashboard/
 │   └── app.py
 │
+├── database/
+│   ├── create_tables.sql
+│   └── insert_sample_data.sql
+│
+├── sql/
+│   └── validation_queries.sql
+│
 ├── data/
 │   └── parts.csv
 │
-├── sql/
-│   └── (future SQL validation scripts)
-│
 ├── images/
-│   └── dashboard.png
 │
 ├── requirements.txt
 │
@@ -86,18 +166,7 @@ AutoPartsQA/
 
 ---
 
-# 🛠️ Technology Stack
-
-- Python 3.9+
-- Pandas
-- NumPy
-- Streamlit
-- Plotly
-- Git & GitHub
-
----
-
-# 📦 Installation
+# ⚙ Installation
 
 Clone the repository:
 
@@ -107,7 +176,7 @@ git clone https://github.com/sriarani16/AutoPartsQA.git
 cd AutoPartsQA
 ```
 
-Install dependencies:
+Install the required packages:
 
 ```bash
 pip install -r requirements.txt
@@ -115,15 +184,37 @@ pip install -r requirements.txt
 
 ---
 
-# ▶️ Running the Application
+# 🗄 Database Setup
 
-Launch the Streamlit dashboard:
+Create the PostgreSQL database:
+
+```sql
+CREATE DATABASE autopartsqa;
+```
+
+Create the required tables:
+
+```bash
+database/create_tables.sql
+```
+
+Insert the sample data:
+
+```bash
+database/insert_sample_data.sql
+```
+
+---
+
+# ▶ Running the Dashboard
+
+Start the Streamlit application:
 
 ```bash
 streamlit run dashboard/app.py
 ```
 
-The application will open at:
+The application will be available at:
 
 ```
 http://localhost:8501
@@ -133,132 +224,79 @@ http://localhost:8501
 
 # 📊 Example Dashboard
 
-> Add a screenshot after running the application.
+> Add screenshots of your dashboard inside the **images/** folder and reference them below.
 
 ```markdown
-![Dashboard](images/dashboard.png)
+![Dashboard Overview](images/dashboard.png)
 ```
 
-Example dashboard sections:
+Example dashboard includes:
 
 - Data Quality Score
-- Missing Value Analysis
-- Duplicate Detection
+- Missing Values Report
+- Duplicate Analysis
 - Invalid Price Detection
-- Manufacturer Statistics
+- Brand Distribution
+- Category Statistics
 - Interactive Charts
 - Raw Dataset Viewer
 
 ---
 
-# 📂 Sample Dataset
+# 🚀 Future Enhancements
 
-The included sample dataset contains automotive parts information such as:
-
-| Column | Description |
-|----------|-------------|
-| Part ID | Unique part identifier |
-| Part Name | Name of the replacement part |
-| Brand | Manufacturer |
-| Vehicle Model | Supported vehicle |
-| Price | Selling price |
-| Category | Part category |
-
-The dataset intentionally includes quality issues to demonstrate the platform's validation capabilities.
-
----
-
-# 🔍 Data Validation Rules
-
-Current validation checks include:
-
-- Missing values
-- Duplicate records
-- Invalid prices
-- Empty fields
-- Inconsistent manufacturer names
-- Dataset completeness
-
-Future versions will include:
-
-- Foreign key validation
-- Referential integrity checks
-- Schema validation
-- Business rule validation
-
----
-
-# 📈 Example Analysis
-
-The dashboard helps answer questions such as:
-
-- How many duplicate records exist?
-- Which manufacturers have the most missing information?
-- What percentage of prices are invalid?
-- Which vehicle models contain incomplete records?
-- What is the current overall data quality score?
-
----
-
-# 🌐 Deployment
-
-The application have been deployed using **Streamlit Community Cloud**.
-
----
-## 🌐 Live Demo
-My app is live here:
-
-👉 [https://autopartsapp.streamlit.app](https://autopartsapp.streamlit.app)
-
-
-# 🔮 Future Enhancements
-
-Planned improvements include:
-
-- CSV file upload
-- SQL validation rules
-- AI-assisted manufacturer name correction
-- Data cleaning recommendations
-- Export cleaned datasets
+- CSV upload functionality
+- Automatic data cleaning recommendations
+- AI-powered duplicate detection
+- REST API for automated quality validation
+- Docker containerization
+- AWS cloud deployment
+- Scheduled data quality monitoring
 - Historical quality tracking
-- REST API for automated quality scoring
-- Unit testing
-- Docker deployment
-- Cloud deployment (AWS)
+- User authentication
+- Export cleaned datasets
 
 ---
 
-# 🎯 Project Goals
+# 🎓 Learning Outcomes
 
-This project was developed to:
+This project demonstrates practical experience with:
 
-- Practice real-world data quality engineering
-- Build interactive analytical dashboards
-- Improve Python and Pandas skills
-- Demonstrate practical data validation techniques
-- Showcase portfolio-ready software development
-- Simulate enterprise data quality workflows used in industry
+- PostgreSQL database design
+- SQL query development
+- Python data processing
+- Data quality engineering
+- Data validation techniques
+- Interactive dashboard development
+- Business analytics and reporting
+- End-to-end data pipeline development
 
 ---
 
-# 👨‍💻 Author
+# 👤 Author
 
 **Sriarani Surenther**
 
 📍 Hamilton, New Zealand
 
-GitHub:
-https://github.com/sriarani16
+**LinkedIn**
 
-LinkedIn:
 https://www.linkedin.com/in/sriarani-surenther
+
+**GitHub**
+
+https://github.com/sriarani16
 
 ---
 
 # 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**, allowing free use, modification, and distribution with appropriate attribution.
 
 ---
 
-⭐ If you found this project useful, consider giving it a star!
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
+
+Feedback and contributions are always welcome!
