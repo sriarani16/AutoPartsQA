@@ -202,24 +202,11 @@ The dashboard helps answer questions such as:
 
 # 🌐 Deployment
 
-The application can be deployed using **Streamlit Community Cloud**.
-
-Steps:
-
-1. Push the repository to GitHub.
-2. Sign in to Streamlit Community Cloud.
-3. Create a new application.
-4. Select:
-
-```
-dashboard/app.py
-```
-
-5. Deploy.
+The application have been deployed using **Streamlit Community Cloud**.
 
 ---
 ## 🌐 Live Demo
-Your app is live here:
+My app is live here:
 
 👉 [https://autopartsapp.streamlit.app](https://autopartsapp.streamlit.app)
 
