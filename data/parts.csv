@@ -1,21 +1,73 @@
-PartID,Brand,Vehicle,PartName,Price
-101,Toyota,Corolla,Brake Pad,120
-102,Toyota,Corolla,Brake Pad,120
-103,Toyta,Corolla,Brake Pad,120
-104,Honda,Civic,Oil Filter,40
-105,Honda,,Oil Filter,40
-106,,Camry,Air Filter,55
-107,Ford,Focus,Brake Pad,-10
-108,Ford,Focus,Brake Pad,0
-109,BMW,320i,Engine Oil,abc
-110,Toyota,RAV4,Spark Plug,35
-111,Toyota,RAV4,Spark Plug,35
-112,Toyota,RAV4,Spark Plug,35
-113,Honda,Accord,Air Filter,
-114,Nissan,Altima,Brake Pad,75
-115,Nissan,,Brake Pad,75
-116,Ford,Focus,,60
-117,,Civic,Oil Filter,40
-118,BMW,320i,Brake Disc,0
-119,BMW,320i,Brake Disc,150
-120,Toyta,Corolla,Brake Pad,120
+part_id,manufacturer,model,category,part_name,price
+1,Toyota,Corolla,Engine,Air Filter,25
+2,Toyota,Corolla,Brakes,Brake Pad Set,45
+3,Toyota,Corolla,Suspension,Front Shock Absorber,120
+4,Toyota,Camry,Engine,Oil Filter,18
+5,Toyota,Camry,Electrical,Alternator,210
+6,Toyota,RAV4,Body,Side Mirror,95
+7,Toyota,RAV4,Brakes,Brake Rotor,130
+8,Honda,Civic,Engine,Spark Plug,12
+9,Honda,Civic,Brakes,Brake Caliper,160
+10,Honda,Civic,Suspension,Rear Strut,140
+11,Honda,Accord,Engine,Timing Belt,85
+12,Honda,Accord,Electrical,Battery,150
+13,Honda,CR-V,Body,Front Bumper,220
+14,Honda,CR-V,Brakes,ABS Sensor,75
+15,Ford,Focus,Engine,Fuel Pump,180
+16,Ford,Focus,Brakes,Brake Disc,110
+17,Ford,Focus,Suspension,Control Arm,95
+18,Ford,Fiesta,Electrical,Starter Motor,190
+19,Ford,Fiesta,Body,Door Handle,35
+20,Ford,Fiesta,Brakes,Brake Hose,40
+21,Nissan,Altima,Engine,Air Intake Hose,55
+22,Nissan,Altima,Brakes,Brake Booster,210
+23,Nissan,Altima,Suspension,Stabilizer Link,30
+24,Nissan,Rogue,Electrical,Ignition Coil,65
+25,Nissan,Rogue,Body,Rear Tail Light,120
+26,Nissan,Rogue,Brakes,Parking Brake Cable,45
+27,BMW,320i,Engine,Oil Pan,260
+28,BMW,320i,Brakes,Brake Wear Sensor,35
+29,BMW,320i,Suspension,Front Strut Mount,70
+30,BMW,X5,Electrical,Mass Airflow Sensor,140
+31,BMW,X5,Body,Front Grille,180
+32,BMW,X5,Brakes,Brake Pad Set,95
+33,Audi,A4,Engine,Water Pump,240
+34,Audi,A4,Brakes,Brake Disc,130
+35,Audi,A4,Suspension,Ball Joint,85
+36,Audi,Q5,Electrical,Oxygen Sensor,110
+37,Audi,Q5,Body,Rear Bumper,260
+38,Audi,Q5,Brakes,Brake Caliper,190
+39,Hyundai,Elantra,Engine,Serpentine Belt,35
+40,Hyundai,Elantra,Brakes,Brake Pad Set,50
+41,Hyundai,Elantra,Suspension,Shock Absorber,115
+42,Hyundai,Tucson,Electrical,Headlight Assembly,160
+43,Hyundai,Tucson,Body,Side Skirt,140
+44,Hyundai,Tucson,Brakes,Brake Rotor,125
+45,Kia,Optima,Engine,Oil Filter,20
+46,Kia,Optima,Brakes,Brake Pad Set,45
+47,Kia,Optima,Suspension,Rear Shock,110
+48,Kia,Sportage,Electrical,Alternator,200
+49,Kia,Sportage,Body,Door Mirror,90
+50,Kia,Sportage,Brakes,Brake Disc,105
+51,Toyota,Corolla,Engine,Air Filter,25
+52,Toyota,Corolla,Engine,Air Filter,25
+53,Honda,Civic,Brakes,Brake Pad Set,45
+54,Nissan,Rogue,Electrical,Ignition Coil,65
+55,BMW,320i,Suspension,Front Strut Mount,70
+56,Ford,Focus,Engine,Fuel Pump,180
+57,Toyta,Corolla,Engine,Air Filter,25
+58,Hunda,Civic,Brakes,Brake Pad Set,45
+59,Nisssan,Rogue,Electrical,Ignition Coil,65
+60,BMM,320i,Suspension,Front Strut Mount,70
+61,Frod,Focus,Engine,Fuel Pump,180
+62,Toyota,Camry,,Oil Filter,18
+63,Honda,Accord,Brakes,,0
+64,Nissan,Altima,Engine,Air Intake Hose,-10
+65,BMW,X5,Body,Front Grille,
+66,Toyota,Corolla,Brakes,Brake Pad,45
+67,Toyota,Corolla,Brakes,Brake Pads,45
+68,Toyota,Corolla,Brakes,Brake Pad Set,45
+69,Toyota,Corolla,Brakes,Brake Disc,110
+70,Ford,Focus,,Fuel Pump,180
+71,,Civic,Engine,Spark Plug,12
+72,Nissan,Rogue,Electrical,,65

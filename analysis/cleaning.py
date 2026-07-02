@@ -1,21 +1,28 @@
+
+
 import pandas as pd
-import numpy as np
 
-DATA_PATH = "data/parts.csv"
+def clean_data(df):
+    # Standardize column names
+    df.columns = df.columns.str.lower().str.strip()
 
-def load_data():
-    df = pd.read_csv(DATA_PATH)
+    # Rename to expected names
+    df = df.rename(columns={
+        "brand": "manufacturer",
+        "vehicle": "model",
+        "partname": "part_name"
+    })
+
+    # Convert price to numeric (invalid → NaN)
+    df["price"] = pd.to_numeric(df["price"], errors="coerce")
+
+    # Remove duplicates
+    df = df.drop_duplicates()
+
+    # Drop rows missing key fields
+    df = df.dropna(subset=["manufacturer", "model", "part_name"])
+
+    # Remove invalid prices (<= 0)
+    df["price"] = df["price"].apply(lambda x: x if x and x > 0 else None)
+
     return df
-
-def basic_profile(df):
-    print("Shape:", df.shape)
-    print("\nColumns:", df.columns.tolist())
-    print("\nHead:")
-    print(df.head())
-    print("\nMissing values per column:")
-    print(df.isnull().sum())
-    print("\nDuplicate rows:", df.duplicated().sum())
-
-if __name__ == "__main__":
-    df = load_data()
-    basic_profile(df)
